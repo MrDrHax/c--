@@ -43,3 +43,18 @@ int main(){
     delete [] enteros;
 }
 
+void listsOfLists(){
+    int ** theListOfLists; // the double ** makes a reference to a double thingy
+    int sizeOfTheList [2] = {2,5}; // size of the list of lists on (a 1d list)
+
+    theListOfLists = new int*[sizeOfTheList[0]]; // define the first thingy
+
+    theListOfLists = new int*[sizeOfTheList[0]];  //aquí se reservan los renglones
+    for(int i=0; i<sizeOfTheList[0];i++)
+        theListOfLists[i] = new int[sizeOfTheList[1]];  //en cada renglón reservamos cuántas columnas habrá
+
+
+    for(int i=0; i<sizeOfTheList[0];i++)
+        delete [] theListOfLists[i];
+    delete [] theListOfLists;
+}
