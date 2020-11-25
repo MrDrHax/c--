@@ -1,0 +1,6 @@
+RAM
+agrega una cantidad de ram especial, no se que hace, pero se ve bien
+100
+Motherboard
+la parte central, hace cosas magicas
+1000
