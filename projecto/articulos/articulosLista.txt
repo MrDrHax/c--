@@ -4,3 +4,9 @@ agrega una cantidad de ram especial, no se que hace, pero se ve bien
 Motherboard
 la parte central, hace cosas magicas
 1000
+Ventilador
+El ventilador ayuda con el calentamiento
+20
+SSD
+Almacenaniemto bien chido, va muy rapido
+200
