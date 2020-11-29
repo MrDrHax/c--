@@ -33,6 +33,10 @@ int main(){
             delete listaSupper;
             listaSupper = new listaDeArticulos(false);
         }
+        
+        else if (input == "Checkout"){
+            Checkout();
+        }
 
         else{
             cout << "\u001b[93mCual es la cantidad que gustas agregar?\u001b[32m";
