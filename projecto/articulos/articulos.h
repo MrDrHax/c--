@@ -37,4 +37,6 @@ class listaDeArticulos{
     articulo returnArticle(int id);
     articulo returnArticle(string name);
     void addArticle(string name, int amount, listaDeArticulos * pointerToAdd);
+    
+    void Checkout ();
 };
