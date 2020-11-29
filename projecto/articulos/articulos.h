@@ -25,6 +25,7 @@ class articulo{
 class listaDeArticulos{
     private:
     vector<articulo> articleList;
+    vector<int> amountList;
     void readJSON();
 
     public:
