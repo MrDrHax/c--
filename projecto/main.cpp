@@ -29,6 +29,11 @@ int main(){
             listaSupper->print();
         }
 
+        else if (input == "vaciar"){
+            delete listaSupper;
+            listaSupper = new listaDeArticulos(false);
+        }
+
         else{
             cout << "\u001b[93mCual es la cantidad que gustas agregar?\u001b[32m";
             cin >> cantidad;
