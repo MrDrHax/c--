@@ -32,6 +32,7 @@ class listaDeArticulos{
     listaDeArticulos();
     listaDeArticulos(bool readArticles);
     void print();
+    void print(bool withAmmounts);
     void print(int id);
     void print(int start, int end);
     articulo returnArticle(int id);

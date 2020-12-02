@@ -131,9 +131,28 @@ void listaDeArticulos::print(){
     {
         cout << "\u001b[36m" << listaDeArticulos::articleList[i].getName() << "\u001b[37m" << endl;
         cout << "   $ " << listaDeArticulos::articleList[i].getPrice() << endl << endl;
-        cout << "   " << listaDeArticulos::articleList[i].getDescription() << endl << endl << endl;
+        cout << "   " << listaDeArticulos::articleList[i].getDescription() << endl;
     }
     
+}
+
+void listaDeArticulos::print(bool withAmmounts){
+    if (withAmmounts){
+        for (int i = 0; i < listaDeArticulos::articleList.size(); i++)
+        {
+            cout << "\u001b[36m" << listaDeArticulos::articleList[i].getName() << "\u001b[37m" << endl;
+            cout << "   $ " << listaDeArticulos::articleList[i].getPrice() << endl << endl;
+            cout << "   " << listaDeArticulos::articleList[i].getDescription() << endl;
+            cout << "   Cantidad: " << listaDeArticulos::amountList[i] << "Kg" << endl << endl << endl;
+        }
+    }else{
+        for (int i = 0; i < listaDeArticulos::articleList.size(); i++)
+        {
+            cout << "\u001b[36m" << listaDeArticulos::articleList[i].getName() << "\u001b[37m" << endl;
+            cout << "   $ " << listaDeArticulos::articleList[i].getPrice() << endl << endl;
+            cout << "   " << listaDeArticulos::articleList[i].getDescription() << endl;
+        }
+    }
 }
 
 void listaDeArticulos::print(int id){
@@ -166,9 +185,20 @@ articulo listaDeArticulos::returnArticle(string name){
 }
 
 void listaDeArticulos::addArticle(string name, int amount, listaDeArticulos * pointerToAdd){
-    for (int i = 0; i < amount; i++)
+    listaDeArticulos::articleList.push_back(pointerToAdd->returnArticle(name));
+    listaDeArticulos::amountList.push_back(amount);
+}
+
+void listaDeArticulos::Checkout(){
+    float precioFinal = 0.0f;
+    for (int i = 0; i < listaDeArticulos::articleList.size(); i++)
     {
-        listaDeArticulos::articleList.push_back(pointerToAdd->returnArticle(name));
+        precioFinal += listaDeArticulos::articleList[i].getPrice() * listaDeArticulos::amountList[i];
     }
+
+    cout << "Procesando pagos...." << endl;
+
+    cout << "precio sin impuestos: $" << precioFinal << endl;
+    cout << "Precio con impuestos: $" << precioFinal * 1.10f << endl;
 }
 

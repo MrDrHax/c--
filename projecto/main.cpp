@@ -26,7 +26,7 @@ int main(){
         }
 
         else if (input == "lista"){
-            listaSupper->print();
+            listaSupper->print(true);
         }
 
         else if (input == "vaciar"){
@@ -35,7 +35,9 @@ int main(){
         }
         
         else if (input == "Checkout"){
-            Checkout();
+            listaSupper->print(true);
+            listaSupper->Checkout();
+            break;
         }
 
         else{
