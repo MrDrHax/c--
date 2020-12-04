@@ -40,14 +40,12 @@ protected:
     short int modelo;
     short int maxVel;
 
-    contenedor();
-    contenedor(string Marcadelcarro, string nombredelcarro, int modelodelcarro, int maxveldelcarro);
+public:
+    //contenedor(string Marcadelcarro, string nombredelcarro, int modelodelcarro, int maxveldelcarro);
     void print();
 };
 
 class cochesitoBruummmmmmmmmmm: public contenedor, public motor{
-    cochesitoBruummmmmmmmmmm(string tipoDeMotor, short int cilindroOBateriasDelMotor, int potenciaDelMotor);
-
     void setMarca(string marcaNueva);
     void setNombre(string nombreNuevo);
     void setModelo(short int modeloNuevo);
@@ -57,6 +55,9 @@ class cochesitoBruummmmmmmmmmm: public contenedor, public motor{
     void setMotorHP(int potenciaEnHPNueva);
 
 public:
+    cochesitoBruummmmmmmmmmm();
+    cochesitoBruummmmmmmmmmm(string marca, string nombre, string tipoDeMotor, short int cilindroOBateriasDelMotor, int potenciaDelMotor, short int modelo, short int cantidadDeCilindros);
+
     string getMarca();
     string getNombre();
     short int getModelo();
